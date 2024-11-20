@@ -56,5 +56,15 @@ function removeStudent(index) {
     updateStudentList();
 }
 
+// Populate branch options
+const branches = ["science", "maths", "philosophy"];
+const branchOptions = document.getElementById("branch-options");
+
+branches.forEach((branch, index) => {
+        const opt = document.createElement('option');
+        opt.innerHTML = branch;
+        branchOptions.appendChild(opt);
+    });
+
 // Initial update
 updateStudentList();
